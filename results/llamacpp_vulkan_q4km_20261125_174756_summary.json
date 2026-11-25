@@ -1,0 +1,61 @@
+{
+  "backend": "llamacpp",
+  "model": "qwen3.5-4b",
+  "label": "llamacpp_vulkan_q4km",
+  "examples": 45,
+  "runs": 3,
+  "valid_json_rate": 1.0,
+  "mean_f1": 0.9593,
+  "median_tokens_per_s": 74.53,
+  "median_ttft_s": 2.305,
+  "median_seconds_per_request": 2.76,
+  "total_benchmark_time_s": 417.4,
+  "cold_start_s": 18.39,
+  "num_ctx_requested": 4096,
+  "structured_output": "json_schema",
+  "requests_with_thinking_output": 0,
+  "gpu_used_mb_before": [
+    3937
+  ],
+  "peak_gpu_used_mb_per_gpu": [
+    5591
+  ],
+  "system_ram_used_mb_before": 19184,
+  "peak_system_ram_used_mb": 23344,
+  "peak_server_process_ram_mb": 9720,
+  "engine_version": "b12721-79c69f4b0",
+  "context_length": 4096,
+  "model_path": "C:\\Users\\victo\\.cache\\huggingface\\hub\\models--unsloth--Qwen3.5-4B-GGUF\\snapshots\\e87f176479d0855a907a41277aca2f8ee7a09523\\Qwen3.5-4B-Q4_K_M.gguf",
+  "notes": "",
+  "system": {
+    "os_name": "Microsoft Windows 10 Pro",
+    "os_version": "10.0.19045 (build 19045)",
+    "processors": [
+      {
+        "name": "AMD Ryzen 7 3700X 8-Core Processor",
+        "cores": 8,
+        "logical_processors": 16
+      }
+    ],
+    "ram_gb": 31.9,
+    "computer": "Micro-Star International Co., Ltd. MS-7A34",
+    "gpus": [
+      {
+        "name": "Meta Virtual Monitor",
+        "driver": "5.3.57.114"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 3060 Ti",
+        "driver": "32.0.16.1088"
+      }
+    ],
+    "nvidia_gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 3060 Ti",
+        "vram_mb": 8192,
+        "driver": "610.88"
+      }
+    ]
+  }
+}
