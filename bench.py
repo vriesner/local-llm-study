@@ -64,7 +64,7 @@ BACKENDS = {  # root URL, process-name substrings for RAM tracking
 
 
 # ---------- Requests (all streaming) ----------
-def call_ollama(base, model, transcript, num_ctx, use_schema):
+def call_ollama(base, model, transcript, num_ctx, use_schema, max_tokens=0):
     body = {
         "model": model, "stream": True, "think": False,
         "format": SCHEMA if use_schema else "json",
@@ -72,6 +72,8 @@ def call_ollama(base, model, transcript, num_ctx, use_schema):
         "messages": [{"role": "system", "content": SYSTEM_PROMPT},
                      {"role": "user", "content": transcript}],
     }
+    if max_tokens:
+        body["options"]["num_predict"] = max_tokens
     req = urllib.request.Request(base + "/api/chat", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
     t0 = time.perf_counter()
@@ -104,7 +106,7 @@ def call_ollama(base, model, transcript, num_ctx, use_schema):
     }
 
 
-def call_openai(base, key, model, transcript, use_schema, extra, backend):
+def call_openai(base, key, model, transcript, use_schema, extra, backend, max_tokens=0):
     body = {
         "model": model, "stream": True, "stream_options": {"include_usage": True},
         "temperature": 0, "seed": 0,
@@ -114,7 +116,12 @@ def call_openai(base, key, model, transcript, use_schema, extra, backend):
     if use_schema:
         body["response_format"] = {"type": "json_schema", "json_schema": {
             "name": "action_items", "strict": True, "schema": SCHEMA}}
+    if max_tokens:
+        body["max_tokens"] = max_tokens
     if backend == "llamacpp":  # turn Qwen thinking off (needs --jinja on the server)
+        body["chat_template_kwargs"] = {"enable_thinking": False}
+    if backend == "lmstudio":  # LM Studio may honor either field; unknown fields are ignored
+        body["reasoning"] = "off"
         body["chat_template_kwargs"] = {"enable_thinking": False}
     body.update(extra)
     headers = {"Content-Type": "application/json"}
@@ -346,6 +353,9 @@ def main():
     ap.add_argument("--no-schema", action="store_true", help="plain JSON mode instead of a JSON schema")
     ap.add_argument("--proc", nargs="*", help="process-name substrings for RAM tracking")
     ap.add_argument("--extra", default="{}", help="extra JSON merged into OpenAI-style request bodies")
+    ap.add_argument("--limit", type=int, default=0, help="only use the first N examples (quick test)")
+    ap.add_argument("--max-tokens", type=int, default=1024,
+                    help="cap output tokens per request so a runaway generation can't stall the run (0 = no cap)")
     ap.add_argument("--notes", default="", help="free text saved in the summary (e.g. which GPU was used)")
     args = ap.parse_args()
 
@@ -359,11 +369,13 @@ def main():
 
     def call(transcript):
         if args.backend == "ollama":
-            return call_ollama(base, args.model, transcript, args.num_ctx, use_schema)
-        return call_openai(base, args.api_key, args.model, transcript, use_schema, extra, args.backend)
+            return call_ollama(base, args.model, transcript, args.num_ctx, use_schema, args.max_tokens)
+        return call_openai(base, args.api_key, args.model, transcript, use_schema, extra, args.backend, args.max_tokens)
 
     with open(args.data, encoding="utf-8") as f:
         examples = [json.loads(line) for line in f if line.strip()]
+    if args.limit:
+        examples = examples[:args.limit]
     if psutil is None:
         print("Note: psutil not installed, so RAM won't be tracked (run: py -m pip install psutil)")
 
@@ -374,7 +386,9 @@ def main():
 
     print(f"Loaded {len(examples)} examples. Warming up {args.model} on {args.backend}...")
     t_warm = time.perf_counter()
-    call(examples[0]["transcript"])  # not recorded
+    w = call(examples[0]["transcript"])  # not recorded
+    print(f"  warm-up finished in {time.perf_counter() - t_warm:.1f}s "
+          f"({w['completion_tokens']} tokens{', THINKING detected' if w['thinking'] else ''})", flush=True)
     cold_start_s = time.perf_counter() - t_warm
     info = server_info(args.backend, base, args.model)
 
@@ -396,6 +410,8 @@ def main():
                 "prompt_tokens": r["prompt_tokens"], "output_tokens": r["completion_tokens"],
                 "wall_s": round(r["wall"], 3), "output": r["text"],
             })
+            print(f"    run {run} id {ex['id']}: {r['wall']:.1f}s, {r['completion_tokens']} tokens, "
+                  f"valid={int(valid)}{' THINKING' if r['thinking'] else ''}", flush=True)
         print(f"  run {run}/{args.runs} done")
     total_s = time.perf_counter() - t_start
     sampler.stop_flag.set()
@@ -420,6 +436,7 @@ def main():
         "total_benchmark_time_s": round(total_s, 1),
         "cold_start_s": round(cold_start_s, 2),
         "num_ctx_requested": args.num_ctx,
+        "max_tokens_cap": args.max_tokens,
         "structured_output": "json_schema" if use_schema else "json_mode",
         "requests_with_thinking_output": int(thinking_hits),
         "gpu_used_mb_before": baseline_gpu,
