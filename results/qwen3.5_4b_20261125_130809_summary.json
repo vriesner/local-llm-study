@@ -1,0 +1,19 @@
+{
+  "model": "qwen3.5:4b",
+  "examples": 45,
+  "runs": 3,
+  "valid_json_rate": 1.0,
+  "mean_f1": 0.9148,
+  "median_tokens_per_s": 8.16,
+  "median_ttft_s": 1.131,
+  "median_seconds_per_request": 6.9,
+  "total_benchmark_time_s": 1061.1,
+  "cold_start_s": 21.29,
+  "num_ctx": 4096,
+  "gpu_used_mb_before": 0,
+  "peak_gpu_used_mb_system": 2541,
+  "peak_ollama_ram_mb": 69,
+  "model_total_gb": 3.74,
+  "model_in_vram_gb": 1.88,
+  "context_length": 4096
+}
