@@ -7,8 +7,8 @@ Usage (PowerShell):
     py bench.py qwen3.5:4b --backend ollama
     py bench.py qwen3.5-4b --backend llamacpp --label llamacpp_q4km
     py bench.py <id from http://localhost:1234/v1/models> --backend lmstudio
-    $env:OPENROUTER_API_KEY="sk-or-..."
-    py bench.py <openrouter/model-id> --backend openrouter
+    py bench.py <openrouter/model-id> --backend openrouter --label cloud_<name>
+        (reads OPENROUTER_API_KEY from a .env file next to this script, or from the environment)
 
 Expects data/test.jsonl (one JSON object per line):
 {"id": 1, "transcript": "...", "expected": [{"owner": "Sam", "due": "Friday"}]}
@@ -30,12 +30,35 @@ import statistics
 import subprocess
 import threading
 import time
+import urllib.error
 import urllib.request
 
 try:
     import psutil
 except ImportError:
     psutil = None
+
+
+def load_dotenv():
+    """Tiny .env reader (no extra install). Real environment variables win over the file."""
+    seen = set()
+    for folder in (os.path.dirname(os.path.abspath(__file__)), os.getcwd()):
+        path = os.path.join(folder, ".env")
+        if path in seen or not os.path.isfile(path):
+            continue
+        seen.add(path)
+        with open(path, encoding="utf-8-sig") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, v = line.split("=", 1)
+                k = k.strip().removeprefix("export ").strip()
+                v = v.strip().strip('"').strip("'")
+                os.environ.setdefault(k, v)
+
+
+load_dotenv()
 
 SYSTEM_PROMPT = (
     "You extract action items from meeting transcripts. "
@@ -64,6 +87,23 @@ BACKENDS = {  # root URL, process-name substrings for RAM tracking
 
 
 # ---------- Requests (all streaming) ----------
+def open_url(req, retries=4):
+    """urlopen with a retry on rate limits/overload and the server's error text on failure."""
+    for attempt in range(retries + 1):
+        try:
+            return urllib.request.urlopen(req, timeout=600)
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "ignore")[:600]
+            if e.code in (429, 502, 503, 504) and attempt < retries:
+                wait = 2 ** (attempt + 1)
+                print(f"    HTTP {e.code}, retrying in {wait}s...", flush=True)
+                time.sleep(wait)
+                continue
+            raise RuntimeError(f"HTTP {e.code} from {req.full_url}: {detail}") from None
+        except urllib.error.URLError as e:
+            raise RuntimeError(f"Could not reach {req.full_url}: {e.reason}. Is the server running?") from None
+
+
 def call_ollama(base, model, transcript, num_ctx, use_schema, max_tokens=0):
     body = {
         "model": model, "stream": True, "think": False,
@@ -78,7 +118,7 @@ def call_ollama(base, model, transcript, num_ctx, use_schema, max_tokens=0):
                                  headers={"Content-Type": "application/json"})
     t0 = time.perf_counter()
     t_first, text, final, thinking = None, [], {}, False
-    with urllib.request.urlopen(req, timeout=600) as resp:
+    with open_url(req) as resp:
         for raw in resp:
             line = raw.decode("utf-8", "ignore").strip()
             if not line:
@@ -118,6 +158,10 @@ def call_openai(base, key, model, transcript, use_schema, extra, backend, max_to
             "name": "action_items", "strict": True, "schema": SCHEMA}}
     if max_tokens:
         body["max_tokens"] = max_tokens
+    if backend == "openrouter":
+        body["usage"] = {"include": True}                # ask for cost accounting
+        body["provider"] = {"require_parameters": True}  # error out instead of silently ignoring schema/seed
+        body["reasoning"] = {"enabled": False}           # no hidden "thinking" tokens, for a fair comparison
     if backend == "llamacpp":  # turn Qwen thinking off (needs --jinja on the server)
         body["chat_template_kwargs"] = {"enable_thinking": False}
     if backend == "lmstudio":  # LM Studio may honor either field; unknown fields are ignored
@@ -130,8 +174,8 @@ def call_openai(base, key, model, transcript, use_schema, extra, backend, max_to
     req = urllib.request.Request(base + "/v1/chat/completions",
                                  data=json.dumps(body).encode(), headers=headers)
     t0 = time.perf_counter()
-    t_first, text, usage, chunks, thinking, timings = None, [], {}, 0, False, {}
-    with urllib.request.urlopen(req, timeout=600) as resp:
+    t_first, text, usage, chunks, thinking, timings, meta = None, [], {}, 0, False, {}, {}
+    with open_url(req) as resp:
         for raw in resp:
             line = raw.decode("utf-8", "ignore").strip()
             if not line.startswith("data:") or line.endswith("[DONE]"):
@@ -142,6 +186,10 @@ def call_openai(base, key, model, transcript, use_schema, extra, backend, max_to
                 continue
             if chunk.get("usage"):
                 usage = chunk["usage"]
+            if chunk.get("provider"):
+                meta["provider"] = chunk["provider"]
+            if chunk.get("model"):
+                meta["model"] = chunk["model"]
             if chunk.get("timings"):
                 timings = chunk["timings"]  # llama.cpp server-side numbers
             for ch in chunk.get("choices", []):
@@ -162,6 +210,7 @@ def call_openai(base, key, model, transcript, use_schema, extra, backend, max_to
         "decode_s": t_end - (t_first or t0), "wall": t_end - t0,
         "completion_tokens": usage.get("completion_tokens", chunks),
         "prompt_tokens": usage.get("prompt_tokens", 0),
+        "cost": usage.get("cost"), "provider": meta.get("provider"), "served_model": meta.get("model"),
         "thinking": thinking or "<think>" in out,
         "server_tps": round(timings["predicted_per_second"], 2) if timings.get("predicted_per_second") else None,
         "server_ttft": round(timings["prompt_ms"] / 1000, 3) if timings.get("prompt_ms") else None,
@@ -367,6 +416,11 @@ def main():
     label = args.label or f"{args.backend}_{args.model}"
     label = re.sub(r"[^A-Za-z0-9._-]+", "_", label)
 
+    cloud = args.backend == "openrouter"
+    if cloud and not args.api_key:
+        raise SystemExit("No OPENROUTER_API_KEY found. Put OPENROUTER_API_KEY=sk-or-... in a .env file "
+                         "next to bench.py, or run: $env:OPENROUTER_API_KEY=\"sk-or-...\"")
+
     def call(transcript):
         if args.backend == "ollama":
             return call_ollama(base, args.model, transcript, args.num_ctx, use_schema, args.max_tokens)
@@ -390,10 +444,12 @@ def main():
     print(f"  warm-up finished in {time.perf_counter() - t_warm:.1f}s "
           f"({w['completion_tokens']} tokens{', THINKING detected' if w['thinking'] else ''})", flush=True)
     cold_start_s = time.perf_counter() - t_warm
+    served = w
     info = server_info(args.backend, base, args.model)
 
     sampler = MemorySampler(procs)
-    sampler.start()
+    if not cloud:  # a cloud run uses none of this laptop's GPU/RAM, so don't record misleading numbers
+        sampler.start()
     rows, thinking_hits = [], 0
     t_start = time.perf_counter()
     for run in range(1, args.runs + 1):
@@ -403,6 +459,7 @@ def main():
             valid, p, rc, f1 = score(r["text"], ex["expected"])
             rows.append({
                 "backend": args.backend, "model": args.model, "run": run, "id": ex["id"],
+                "provider": r.get("provider"), "cost_usd": r.get("cost"),
                 "valid_json": int(valid), "precision": p, "recall": rc, "f1": f1,
                 "tokens_per_s": round(r["completion_tokens"] / r["decode_s"], 2) if r["decode_s"] > 0 else 0.0,
                 "ttft_s": round(r["ttft"], 3),
@@ -415,7 +472,8 @@ def main():
         print(f"  run {run}/{args.runs} done")
     total_s = time.perf_counter() - t_start
     sampler.stop_flag.set()
-    sampler.join(timeout=3)
+    if sampler.is_alive():
+        sampler.join(timeout=3)
 
     os.makedirs("results", exist_ok=True)
     base_name = f"results/{label}_{time.strftime('%Y%m%d_%H%M%S')}"
@@ -425,6 +483,7 @@ def main():
         w.writerows(rows)
 
     first = [r for r in rows if r["run"] == 1]  # accuracy is deterministic (temp 0, seed 0)
+    costs = [r["cost_usd"] for r in rows if isinstance(r.get("cost_usd"), (int, float))]
     summary = {
         "backend": args.backend, "model": args.model, "label": label,
         "examples": len(examples), "runs": args.runs,
@@ -439,6 +498,11 @@ def main():
         "max_tokens_cap": args.max_tokens,
         "structured_output": "json_schema" if use_schema else "json_mode",
         "requests_with_thinking_output": int(thinking_hits),
+        "cost_usd_total": round(sum(costs), 6) if costs else None,
+        "cost_usd_per_1000_requests": round(1000 * sum(costs) / len(costs), 4) if costs else None,
+        "providers_seen": sorted({r["provider"] for r in rows if r.get("provider")}),
+        "served_model_ids": sorted({str(w.get("served_model")) for w in [served] if w.get("served_model")}),
+        "cloud_run_memory_not_recorded": cloud,
         "gpu_used_mb_before": baseline_gpu,
         "peak_gpu_used_mb_per_gpu": sampler.peak_gpu,
         "system_ram_used_mb_before": baseline_ram,
@@ -459,8 +523,17 @@ def main():
     print(f"Median s per request   : {summary['median_seconds_per_request']}")
     print(f"Total benchmark time   : {total_s:.1f} s ({total_s / 60:.1f} min) for {len(rows)} requests")
     print(f"Cold start (s)         : {cold_start_s:.1f}")
-    print(f"GPU memory (MB)        : {baseline_gpu} before -> {sampler.peak_gpu} peak (per GPU)")
-    print(f"System RAM used (MB)   : {baseline_ram} before -> {summary['peak_system_ram_used_mb']} peak")
+    if cloud:
+        print("GPU/RAM                : not recorded (model runs on the provider's hardware)")
+        if summary["cost_usd_total"] is not None:
+            print(f"Cost                   : ${summary['cost_usd_total']:.4f} total, "
+                  f"${summary['cost_usd_per_1000_requests']:.4f} per 1,000 requests")
+        else:
+            print("Cost                   : not reported by the API (use token counts x the model's price)")
+        print(f"Providers served by    : {summary['providers_seen']}")
+    else:
+        print(f"GPU memory (MB)        : {baseline_gpu} before -> {sampler.peak_gpu} peak (per GPU)")
+        print(f"System RAM used (MB)   : {baseline_ram} before -> {summary['peak_system_ram_used_mb']} peak")
     if info:
         print("Server info            :", {k: v for k, v in info.items()})
     cpu = ", ".join(c["name"] for c in sysinfo.get("processors", []))
