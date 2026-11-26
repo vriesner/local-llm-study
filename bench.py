@@ -99,7 +99,14 @@ def open_url(req, retries=4):
                 print(f"    HTTP {e.code}, retrying in {wait}s...", flush=True)
                 time.sleep(wait)
                 continue
-            raise RuntimeError(f"HTTP {e.code} from {req.full_url}: {detail}") from None
+            hint = ""
+            if "Filter by Parameters" in detail:
+                hint = ("\n\nHINT: no provider supports every setting in the request (require_parameters is on). "
+                        "Reasoning models often reject temperature/seed and can't turn reasoning off. Try:\n"
+                        "  --drop temperature seed        (remove settings the model doesn't accept)\n"
+                        "  --reasoning minimal            (or low/none/default instead of the default 'off')\n"
+                        "and keep a note of what you changed for your methods section.")
+            raise RuntimeError(f"HTTP {e.code} from {req.full_url}: {detail}{hint}") from None
         except urllib.error.URLError as e:
             raise RuntimeError(f"Could not reach {req.full_url}: {e.reason}. Is the server running?") from None
 
@@ -168,6 +175,7 @@ def call_openai(base, key, model, transcript, use_schema, extra, backend, max_to
         body["reasoning"] = "off"
         body["chat_template_kwargs"] = {"enable_thinking": False}
     body.update(extra)
+    body = {k: v for k, v in body.items() if v is not None}  # --drop / null values remove a setting
     headers = {"Content-Type": "application/json"}
     if key:
         headers["Authorization"] = "Bearer " + key
@@ -405,6 +413,11 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="only use the first N examples (quick test)")
     ap.add_argument("--max-tokens", type=int, default=1024,
                     help="cap output tokens per request so a runaway generation can't stall the run (0 = no cap)")
+    ap.add_argument("--drop", nargs="*", default=[], metavar="FIELD",
+                    help="request fields to remove (OpenAI-style backends), e.g. --drop temperature seed")
+    ap.add_argument("--reasoning", default="off",
+                    choices=["off", "none", "minimal", "low", "medium", "high", "default"],
+                    help="OpenRouter only. 'off' disables reasoning; 'default' sends no reasoning setting")
     ap.add_argument("--notes", default="", help="free text saved in the summary (e.g. which GPU was used)")
     args = ap.parse_args()
 
@@ -412,6 +425,13 @@ def main():
     base = (args.base_url or root).rstrip("/")
     procs = [p.lower() for p in (args.proc if args.proc is not None else default_procs)]
     extra = json.loads(args.extra)
+    for field in args.drop:
+        extra[field] = None
+    if args.backend == "openrouter" and "reasoning" not in extra:
+        if args.reasoning == "default":
+            extra["reasoning"] = None
+        elif args.reasoning in ("none", "minimal", "low", "medium", "high"):
+            extra["reasoning"] = {"effort": args.reasoning}
     use_schema = not args.no_schema
     label = args.label or f"{args.backend}_{args.model}"
     label = re.sub(r"[^A-Za-z0-9._-]+", "_", label)
@@ -496,6 +516,8 @@ def main():
         "cold_start_s": round(cold_start_s, 2),
         "num_ctx_requested": args.num_ctx,
         "max_tokens_cap": args.max_tokens,
+        "request_fields_dropped": args.drop,
+        "reasoning_setting": args.reasoning if args.backend == "openrouter" else None,
         "structured_output": "json_schema" if use_schema else "json_mode",
         "requests_with_thinking_output": int(thinking_hits),
         "cost_usd_total": round(sum(costs), 6) if costs else None,
