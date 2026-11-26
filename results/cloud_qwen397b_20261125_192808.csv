@@ -1,0 +1,391 @@
+backend,model,run,id,provider,cost_usd,valid_json,precision,recall,f1,tokens_per_s,ttft_s,server_tokens_per_s,server_prompt_s,prompt_tokens,output_tokens,wall_s,output
+openrouter,qwen/qwen3.5-397b-a17b,1,1,DeepInfra,0.00020205,1,1.0,1.0,1.0,44.4,0.458,,,109,51,1.607,"{""action_items"": [{""owner"": ""Sam"", ""task"": ""Send budget draft to Priya"", ""due"": ""Friday""}, {""owner"": ""Priya"", ""task"": ""Book the venue"", ""due"": ""next Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,2,DeepInfra,0.0001299,1,1.0,1.0,1.0,44.45,0.564,,,102,28,1.194,"{""action_items"": [{""owner"": ""Elena"", ""task"": ""Check the server logs"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,3,DeepInfra,0.0002013,1,1.0,1.0,1.0,35.24,0.492,,,114,50,1.91,"{""action_items"": [{""owner"": ""Tariq"", ""task"": ""Review slides"", ""due"": ""Wednesday""}, {""owner"": ""Joan"", ""task"": ""Upload slides to shared drive"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,4,DeepInfra,0.0003201,1,1.0,1.0,1.0,43.49,0.449,,,118,89,2.495,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Omar"",
+      ""task"": ""Prepare and send revised quote"",
+      ""due"": ""end of day""
+    },
+    {
+      ""owner"": ""Mei"",
+      ""task"": ""Call the client to inform them"",
+      ""due"": ""tomorrow morning""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,1,5,DeepInfra,0.0002073,1,1.0,1.0,1.0,41.63,0.511,,,114,52,1.76,"{""action_items"": [{""owner"": ""Lena"", ""task"": ""Finish testing the login fix"", ""due"": ""Tuesday""}, {""owner"": ""Noah"", ""task"": ""Deploy login fix to production"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,6,DeepInfra,0.00014595,1,1.0,1.0,1.0,38.85,0.675,,,111,32,1.499,"{""action_items"": [{""owner"": ""Raj"", ""task"": ""Get three quotes for new laptops"", ""due"": ""15th""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,7,DeepInfra,0.00019395,1,1.0,1.0,1.0,44.2,0.617,,,111,48,1.703,"{""action_items"": [{""owner"": ""Ben"", ""task"": ""Write the intro paragraph"", ""due"": ""Monday""}, {""owner"": ""Fatima"", ""task"": ""Collect the photos"", ""due"": ""Tuesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,8,DeepInfra,0.00013335,1,1.0,1.0,1.0,41.48,0.65,,,103,29,1.349,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Call the repair company"", ""due"": ""this afternoon""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,9,DeepInfra,0.00019965,1,1.0,1.0,1.0,42.63,0.793,,,117,49,1.942,"{""action_items"": [{""owner"": ""Kofi"", ""task"": ""Transfer rent payment"", ""due"": ""1st""}, {""owner"": ""Isabel"", ""task"": ""Update budget sheet"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,10,Parasail,0.0001589,1,1.0,1.0,1.0,51.44,0.39,,,109,29,0.954,"{""action_items"": [{""owner"": ""Victor"", ""task"": ""Send a reminder email"", ""due"": ""next Tuesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,11,DeepInfra,0.000292275,1,0.5,0.5,0.5,40.74,1.889,,,113,48,3.067,"{""action_items"": [{""owner"": ""Aisha"", ""task"": ""Restart demo environment"", ""due"": null}, {""owner"": ""Pedro"", ""task"": ""Message sales team"", ""due"": ""3 pm""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,12,DeepInfra,0.00019695,1,1.0,1.0,1.0,44.0,0.775,,,111,49,1.889,"{""action_items"": [{""owner"": ""Leo"", ""task"": ""Send contract to legal"", ""due"": ""today""}, {""owner"": ""Yuki"", ""task"": ""Follow up with legal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,13,DeepInfra,6.51e-05,1,1.0,1.0,1.0,42.73,0.735,,,98,7,0.899,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,14,Parasail,7.82e-05,1,1.0,1.0,1.0,61.68,0.406,,,106,7,0.52,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,15,DeepInfra,6.825e-05,1,1.0,1.0,1.0,18.46,2.131,,,105,7,2.511,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,16,DeepInfra,6.825e-05,1,1.0,1.0,1.0,70.28,0.531,,,105,7,0.631,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,17,DeepInfra,6.87e-05,1,1.0,1.0,1.0,12.73,0.907,,,106,7,1.457,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,18,DeepInfra,6.825e-05,1,1.0,1.0,1.0,52.75,0.401,,,105,7,0.534,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,19,DeepInfra,0.00013545,1,1.0,1.0,1.0,28.94,0.432,,,101,30,1.468,"{""action_items"": [{""owner"": ""Dev"", ""task"": ""Update outdated screenshots in the onboarding guide"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,20,DeepInfra,0.00013425,1,1.0,1.0,1.0,44.49,0.478,,,105,29,1.13,"{""action_items"": [{""owner"": ""Hugo"", ""task"": ""Email the vendor about the delay"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,21,DeepInfra,0.00020775,1,1.0,1.0,1.0,28.01,0.341,,,115,52,2.197,"{""action_items"": [{""owner"": ""Priti"", ""task"": ""Fix the mobile layout bug"", ""due"": null}, {""owner"": ""Ethan"", ""task"": ""Review Priti's fix"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,22,Parasail,0.0001523,1,1.0,1.0,1.0,64.29,0.502,,,103,28,0.937,"{""action_items"": [{""owner"": ""Sofia"", ""task"": ""Send the meeting notes"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,23,DeepInfra,0.0001278,1,1.0,1.0,1.0,20.83,0.989,,,104,27,2.285,"{""action_items"": [{""owner"": ""Alma"", ""task"": ""Test the backup script"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,24,DeepInfra,0.000129,1,1.0,1.0,1.0,48.79,0.429,,,100,28,1.003,"{""action_items"": [{""owner"": ""Jabu"", ""task"": ""Clean up the supplier list"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,25,DeepInfra,0.00026775,1,1.0,1.0,1.0,44.82,0.534,,,135,69,2.073,"{""action_items"": [{""owner"": ""Bianca"", ""task"": ""finalize the logo"", ""due"": ""Thursday""}, {""owner"": ""Chen"", ""task"": ""print the flyers"", ""due"": ""Friday""}, {""owner"": ""Alex"", ""task"": ""book the room"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,26,DeepInfra,0.00027,1,1.0,1.0,1.0,41.13,0.301,,,120,72,2.052,"{""action_items"": [{""owner"": ""Rosa"", ""task"": ""Write the introduction"", ""due"": ""Monday""}, {""owner"": ""Tobi"", ""task"": ""Handle the data analysis"", ""due"": ""Wednesday""}, {""owner"": ""Lucy"", ""task"": ""Do the references and formatting"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,27,DeepInfra,0.0002217,1,1.0,1.0,1.0,44.53,0.405,,,126,55,1.64,"{""action_items"": [{""owner"": ""Matteo"", ""task"": ""Fix the broken link on the pricing page"", ""due"": ""this morning""}, {""owner"": ""Hye"", ""task"": ""Update the FAQ"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,28,DeepInfra,0.00020445,1,1.0,1.0,1.0,43.91,0.551,,,121,50,1.69,"{""action_items"": [{""owner"": ""Jamal"", ""task"": ""Confirm the caterer"", ""due"": ""Tuesday""}, {""owner"": ""Nia"", ""task"": ""Send out the invitations"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,29,DeepInfra,0.0001908,1,1.0,1.0,1.0,44.47,0.387,,,104,48,1.466,"{""action_items"": [{""owner"": ""Felix"", ""task"": ""Draft the proposal"", ""due"": ""Thursday""}, {""owner"": ""Anya"", ""task"": ""Review the proposal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,30,DeepInfra,0.00038565,1,1.0,1.0,1.0,42.26,0.773,,,117,111,3.399,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Omar"",
+      ""task"": ""Update the changelog"",
+      ""due"": ""Monday""
+    },
+    {
+      ""owner"": ""Li"",
+      ""task"": ""Run the final tests"",
+      ""due"": ""Tuesday""
+    },
+    {
+      ""owner"": ""Beth"",
+      ""task"": ""Publish"",
+      ""due"": ""Wednesday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,1,31,DeepInfra,0.00013275,1,1.0,1.0,1.0,36.3,0.441,,,115,27,1.184,"{""action_items"": [{""owner"": ""Ruth"", ""task"": ""Send the invoice"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,32,Parasail,0.0001537,1,1.0,1.0,1.0,71.18,0.605,,,113,27,0.984,"{""action_items"": [{""owner"": ""Jin"", ""task"": ""Finish the prototype"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,33,Parasail,0.0001702,1,1.0,1.0,1.0,73.84,0.369,,,110,32,0.803,"{""action_items"": [{""owner"": ""Nora"", ""task"": ""Ask Kelly to cover the Saturday shift"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,34,DeepInfra,0.0001395,1,1.0,1.0,1.0,34.41,0.731,,,110,30,1.602,"{""action_items"": [{""owner"": ""Lila"", ""task"": ""Schedule a call with the client"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,35,DeepInfra,6.96e-05,1,1.0,1.0,1.0,44.02,1.681,,,108,7,1.84,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,36,DeepInfra,0.00013215,1,0.0,0.0,0.0,43.81,0.872,,,107,28,1.512,"{""action_items"": [{""owner"": ""all"", ""task"": ""complete the safety training"", ""due"": ""this month""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,37,DeepInfra,0.0001329,1,1.0,1.0,1.0,43.48,2.2,,,102,29,2.867,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Approve the expense report"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,38,DeepInfra,0.00013875,1,1.0,1.0,1.0,43.07,0.611,,,115,29,1.284,"{""action_items"": [{""owner"": ""Elif"", ""task"": ""Look at the failing tests"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,39,Parasail,0.0002188,1,1.0,1.0,1.0,62.99,0.529,,,92,48,1.291,"{""action_items"": [{""owner"": ""Quinn"", ""task"": ""Send the agenda"", ""due"": ""Tuesday""}, {""owner"": ""Quinn"", ""task"": ""Send the minutes"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,40,DeepInfra,7.185e-05,1,1.0,1.0,1.0,47.04,2.095,,,113,7,2.243,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,41,DeepInfra,0.00044295,1,1.0,1.0,1.0,39.06,0.579,,,191,119,3.626,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Dennis"",
+      ""task"": ""Fix two Android bugs"",
+      ""due"": ""Thursday""
+    },
+    {
+      ""owner"": ""Priya"",
+      ""task"": ""Capture screenshots for the store page"",
+      ""due"": ""next Tuesday""
+    },
+    {
+      ""owner"": ""Monica"",
+      ""task"": ""Write the release notes"",
+      ""due"": ""Wednesday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,1,42,Parasail,0.0001754,1,1.0,1.0,1.0,69.48,0.367,,,142,29,0.784,"{""action_items"": [{""owner"": ""Gina"", ""task"": ""Email partners about launch date"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,1,43,Parasail,0.0001027,1,1.0,1.0,1.0,85.51,0.441,,,155,7,0.523,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,1,44,DeepInfra,0.00056265,1,1.0,1.0,1.0,27.96,0.514,,,197,158,6.164,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bao"",
+      ""task"": ""Book the lakeside venue"",
+      ""due"": ""20th""
+    },
+    {
+      ""owner"": ""Cole"",
+      ""task"": ""Get a bus quote"",
+      ""due"": ""next Friday""
+    },
+    {
+      ""owner"": ""Faith"",
+      ""task"": ""Draft schedule of activities"",
+      ""due"": ""this week""
+    },
+    {
+      ""owner"": ""Ingrid"",
+      ""task"": ""Announce the date to the whole company"",
+      ""due"": ""Monday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,1,45,Parasail,0.0002641,1,1.0,1.0,1.0,53.71,0.692,,,125,56,1.735,"{""action_items"": [{""owner"": ""Wanda"", ""task"": ""Clean out the break room fridge"", ""due"": ""after lunch""}, {""owner"": ""Tyler"", ""task"": ""Buy new filters for the coffee machine"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,1,DeepInfra,0.00020205,1,1.0,1.0,1.0,36.48,0.678,,,109,51,2.076,"{""action_items"": [{""owner"": ""Sam"", ""task"": ""Send budget draft to Priya"", ""due"": ""Friday""}, {""owner"": ""Priya"", ""task"": ""Book the venue"", ""due"": ""next Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,2,DeepInfra,0.0001299,1,1.0,1.0,1.0,43.31,0.603,,,102,28,1.249,"{""action_items"": [{""owner"": ""Elena"", ""task"": ""Check the server logs"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,3,DeepInfra,0.0002013,1,1.0,1.0,1.0,43.13,0.464,,,114,50,1.623,"{""action_items"": [{""owner"": ""Tariq"", ""task"": ""Review slides"", ""due"": ""Wednesday""}, {""owner"": ""Joan"", ""task"": ""Upload slides to shared drive"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,4,DeepInfra,0.0002271,1,1.0,1.0,1.0,42.69,0.84,,,118,58,2.198,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Prepare and send revised quote"", ""due"": ""end of day""}, {""owner"": ""Mei"", ""task"": ""Call client to inform about revised quote"", ""due"": ""tomorrow morning""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,5,DeepInfra,0.0002073,1,1.0,1.0,1.0,43.27,0.933,,,114,52,2.135,"{""action_items"": [{""owner"": ""Lena"", ""task"": ""Finish testing the login fix"", ""due"": ""Tuesday""}, {""owner"": ""Noah"", ""task"": ""Deploy login fix to production"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,6,DeepInfra,0.000218925,1,1.0,1.0,1.0,45.79,0.67,,,111,32,1.369,"{""action_items"": [{""owner"": ""Raj"", ""task"": ""Get three quotes for new laptops"", ""due"": ""15th""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,7,DeepInfra,0.00019395,1,1.0,1.0,1.0,49.51,0.897,,,111,48,1.867,"{""action_items"": [{""owner"": ""Ben"", ""task"": ""Write the intro paragraph"", ""due"": ""Monday""}, {""owner"": ""Fatima"", ""task"": ""Collect the photos"", ""due"": ""Tuesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,8,DeepInfra,0.000200025,1,1.0,1.0,1.0,30.26,0.537,,,103,29,1.495,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Call the repair company"", ""due"": ""this afternoon""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,9,Parasail,0.0002349,1,1.0,1.0,1.0,60.24,0.866,,,117,49,1.679,"{""action_items"": [{""owner"": ""Kofi"", ""task"": ""Transfer rent payment"", ""due"": ""1st""}, {""owner"": ""Isabel"", ""task"": ""Update budget sheet"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,10,DeepInfra,0.00013605,1,1.0,1.0,1.0,43.7,0.61,,,109,29,1.273,"{""action_items"": [{""owner"": ""Victor"", ""task"": ""Send a reminder email"", ""due"": ""next Tuesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,11,DeepInfra,0.00019485,1,0.5,0.5,0.5,43.37,0.858,,,113,48,1.965,"{""action_items"": [{""owner"": ""Aisha"", ""task"": ""Restart demo environment"", ""due"": null}, {""owner"": ""Pedro"", ""task"": ""Message sales team"", ""due"": ""3 pm""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,12,DeepInfra,0.00019695,1,1.0,1.0,1.0,17.97,0.506,,,111,49,3.232,"{""action_items"": [{""owner"": ""Leo"", ""task"": ""Send contract to legal"", ""due"": ""today""}, {""owner"": ""Yuki"", ""task"": ""Follow up with legal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,13,Parasail,7.42e-05,1,1.0,1.0,1.0,82.01,0.423,,,98,7,0.508,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,14,DeepInfra,6.87e-05,1,1.0,1.0,1.0,28.41,0.968,,,106,7,1.215,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,15,DeepInfra,0.000102375,1,1.0,1.0,1.0,41.14,0.573,,,105,7,0.743,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,16,DeepInfra,6.825e-05,1,1.0,1.0,1.0,64.03,1.923,,,105,7,2.032,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,17,Parasail,7.82e-05,1,1.0,1.0,1.0,62.47,0.395,,,106,7,0.507,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,18,DeepInfra,0.000102375,1,1.0,1.0,1.0,16.78,0.989,,,105,7,1.406,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,19,DeepInfra,0.00013545,1,1.0,1.0,1.0,33.26,0.401,,,101,30,1.303,"{""action_items"": [{""owner"": ""Dev"", ""task"": ""Update outdated screenshots in the onboarding guide"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,20,DeepInfra,0.000201375,1,1.0,1.0,1.0,28.75,0.788,,,105,29,1.797,"{""action_items"": [{""owner"": ""Hugo"", ""task"": ""Email the vendor about the delay"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,21,DeepInfra,0.00030075,1,1.0,1.0,1.0,42.65,0.611,,,115,83,2.557,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Priti"",
+      ""task"": ""Look into the mobile layout bug"",
+      ""due"": null
+    },
+    {
+      ""owner"": ""Ethan"",
+      ""task"": ""Review Priti's fix"",
+      ""due"": null
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,2,22,DeepInfra,0.000191025,1,1.0,1.0,1.0,43.12,0.407,,,103,27,1.033,"{""action_items"": [{""owner"": ""Sofia"", ""task"": ""Send meeting notes"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,23,DeepInfra,0.0001917,1,1.0,1.0,1.0,43.09,0.607,,,104,27,1.234,"{""action_items"": [{""owner"": ""Alma"", ""task"": ""Test the backup script"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,24,Parasail,0.0001508,1,1.0,1.0,1.0,53.37,0.668,,,100,28,1.193,"{""action_items"": [{""owner"": ""Jabu"", ""task"": ""Clean up the supplier list"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,25,DeepInfra,0.00040275,1,1.0,1.0,1.0,41.49,0.723,,,135,114,3.471,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bianca"",
+      ""task"": ""Finalize the logo"",
+      ""due"": ""Thursday""
+    },
+    {
+      ""owner"": ""Chen"",
+      ""task"": ""Print the flyers"",
+      ""due"": ""Friday""
+    },
+    {
+      ""owner"": ""Alex"",
+      ""task"": ""Book the room"",
+      ""due"": ""today""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,2,26,DeepInfra,0.00027,1,1.0,1.0,1.0,39.62,0.629,,,120,72,2.447,"{""action_items"": [{""owner"": ""Rosa"", ""task"": ""Write the introduction"", ""due"": ""Monday""}, {""owner"": ""Tobi"", ""task"": ""Handle the data analysis"", ""due"": ""Wednesday""}, {""owner"": ""Lucy"", ""task"": ""Do the references and formatting"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,27,DeepInfra,0.0002217,1,1.0,1.0,1.0,32.49,1.17,,,126,55,2.863,"{""action_items"": [{""owner"": ""Matteo"", ""task"": ""Fix the broken link on the pricing page"", ""due"": ""this morning""}, {""owner"": ""Hye"", ""task"": ""Update the FAQ"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,28,DeepInfra,0.000306675,1,1.0,1.0,1.0,42.13,0.693,,,121,50,1.88,"{""action_items"": [{""owner"": ""Jamal"", ""task"": ""Confirm the caterer"", ""due"": ""Tuesday""}, {""owner"": ""Nia"", ""task"": ""Send out the invitations"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,29,Parasail,0.0002248,1,1.0,1.0,1.0,40.2,0.396,,,104,48,1.59,"{""action_items"": [{""owner"": ""Felix"", ""task"": ""Draft the proposal"", ""due"": ""Thursday""}, {""owner"": ""Anya"", ""task"": ""Review the proposal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,30,DeepInfra,0.000578475,1,1.0,1.0,1.0,41.79,0.537,,,117,111,3.193,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Omar"",
+      ""task"": ""Update the changelog"",
+      ""due"": ""Monday""
+    },
+    {
+      ""owner"": ""Li"",
+      ""task"": ""Run the final tests"",
+      ""due"": ""Tuesday""
+    },
+    {
+      ""owner"": ""Beth"",
+      ""task"": ""Publish"",
+      ""due"": ""Wednesday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,2,31,Parasail,0.0001547,1,1.0,1.0,1.0,69.04,0.416,,,115,27,0.807,"{""action_items"": [{""owner"": ""Ruth"", ""task"": ""Send the invoice"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,32,DeepInfra,0.00013185,1,1.0,1.0,1.0,32.38,0.948,,,113,27,1.782,"{""action_items"": [{""owner"": ""Jin"", ""task"": ""Finish the prototype"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,33,Parasail,0.0001702,1,1.0,1.0,1.0,61.39,0.386,,,110,32,0.907,"{""action_items"": [{""owner"": ""Nora"", ""task"": ""Ask Kelly to cover the Saturday shift"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,34,DeepInfra,0.0001395,1,1.0,1.0,1.0,29.58,0.598,,,110,30,1.613,"{""action_items"": [{""owner"": ""Lila"", ""task"": ""Schedule a call with the client"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,35,DeepInfra,0.0001044,1,1.0,1.0,1.0,44.7,0.745,,,108,7,0.902,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,36,DeepInfra,0.000198225,1,0.0,0.0,0.0,35.3,0.736,,,107,28,1.529,"{""action_items"": [{""owner"": ""all"", ""task"": ""complete the safety training"", ""due"": ""this month""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,37,DeepInfra,0.00019935,1,1.0,1.0,1.0,44.49,0.692,,,102,29,1.344,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Approve the expense report"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,38,DeepInfra,0.00013875,1,1.0,1.0,1.0,44.57,0.74,,,115,29,1.391,"{""action_items"": [{""owner"": ""Elif"", ""task"": ""Look at the failing tests"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,39,DeepInfra,0.0004221,1,1.0,1.0,1.0,35.65,0.675,,,92,80,2.918,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Quinn"",
+      ""task"": ""Send the agenda"",
+      ""due"": ""Tuesday""
+    },
+    {
+      ""owner"": ""Quinn"",
+      ""task"": ""Send the minutes"",
+      ""due"": ""Friday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,2,40,Parasail,8.17e-05,1,1.0,1.0,1.0,68.68,0.559,,,113,7,0.661,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,41,Parasail,0.0003583,1,1.0,1.0,1.0,60.53,0.422,,,191,73,1.628,"{""action_items"": [{""owner"": ""Dennis"", ""task"": ""Fix two Android bugs"", ""due"": ""Thursday""}, {""owner"": ""Priya"", ""task"": ""Capture screenshots for store page"", ""due"": ""next Tuesday""}, {""owner"": ""Monica"", ""task"": ""Write release notes"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,42,Parasail,0.0001754,1,1.0,1.0,1.0,52.6,0.367,,,142,29,0.918,"{""action_items"": [{""owner"": ""Gina"", ""task"": ""Email partners about launch date"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,2,43,Parasail,0.0001027,1,1.0,1.0,1.0,73.44,0.368,,,155,7,0.464,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,2,44,DeepInfra,0.000843975,1,1.0,1.0,1.0,32.78,0.581,,,197,158,5.401,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bao"",
+      ""task"": ""Book the lakeside venue"",
+      ""due"": ""20th""
+    },
+    {
+      ""owner"": ""Cole"",
+      ""task"": ""Get a bus quote"",
+      ""due"": ""next Friday""
+    },
+    {
+      ""owner"": ""Faith"",
+      ""task"": ""Draft schedule of activities"",
+      ""due"": ""this week""
+    },
+    {
+      ""owner"": ""Ingrid"",
+      ""task"": ""Announce the date to the whole company"",
+      ""due"": ""Monday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,2,45,DeepInfra,0.000336375,1,1.0,1.0,1.0,26.35,1.203,,,125,56,3.329,"{""action_items"": [{""owner"": ""Wanda"", ""task"": ""Clean out the break room fridge"", ""due"": ""after lunch""}, {""owner"": ""Tyler"", ""task"": ""Buy new filters for the coffee machine"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,1,DeepInfra,0.00020205,1,1.0,1.0,1.0,40.19,0.956,,,109,51,2.225,"{""action_items"": [{""owner"": ""Sam"", ""task"": ""Send budget draft to Priya"", ""due"": ""Friday""}, {""owner"": ""Priya"", ""task"": ""Book the venue"", ""due"": ""next Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,2,DeepInfra,0.00019485,1,1.0,1.0,1.0,43.37,0.63,,,102,28,1.276,"{""action_items"": [{""owner"": ""Elena"", ""task"": ""Check the server logs"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,3,DeepInfra,0.00044595,1,1.0,1.0,1.0,41.86,0.629,,,114,82,2.589,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Tariq"",
+      ""task"": ""Review slides"",
+      ""due"": ""Wednesday""
+    },
+    {
+      ""owner"": ""Joan"",
+      ""task"": ""Upload slides to shared drive"",
+      ""due"": ""Thursday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,3,4,DeepInfra,0.0002271,1,1.0,1.0,1.0,43.17,0.43,,,118,58,1.774,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Prepare and send revised quote"", ""due"": ""end of day""}, {""owner"": ""Mei"", ""task"": ""Call client to inform about revised quote"", ""due"": ""tomorrow morning""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,5,DeepInfra,0.0002073,1,1.0,1.0,1.0,36.42,0.587,,,114,52,2.015,"{""action_items"": [{""owner"": ""Lena"", ""task"": ""Finish testing the login fix"", ""due"": ""Tuesday""}, {""owner"": ""Noah"", ""task"": ""Deploy login fix to production"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,6,DeepInfra,0.000218925,1,1.0,1.0,1.0,43.6,0.458,,,111,32,1.192,"{""action_items"": [{""owner"": ""Raj"", ""task"": ""Get three quotes for new laptops"", ""due"": ""15th""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,7,DeepInfra,0.000290925,1,1.0,1.0,1.0,36.22,0.532,,,111,48,1.857,"{""action_items"": [{""owner"": ""Ben"", ""task"": ""Write the intro paragraph"", ""due"": ""Monday""}, {""owner"": ""Fatima"", ""task"": ""Collect the photos"", ""due"": ""Tuesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,8,DeepInfra,0.000200025,1,1.0,1.0,1.0,42.8,0.734,,,103,29,1.412,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Call the repair company"", ""due"": ""this afternoon""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,9,DeepInfra,0.000443475,1,1.0,1.0,1.0,42.96,0.406,,,117,81,2.292,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Kofi"",
+      ""task"": ""Transfer rent payment"",
+      ""due"": ""1st""
+    },
+    {
+      ""owner"": ""Isabel"",
+      ""task"": ""Update budget sheet"",
+      ""due"": ""Friday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,3,10,DeepInfra,0.000204075,1,1.0,1.0,1.0,43.13,0.599,,,109,29,1.271,"{""action_items"": [{""owner"": ""Victor"", ""task"": ""Send a reminder email"", ""due"": ""next Tuesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,11,DeepInfra,0.00019485,1,0.5,0.5,0.5,39.59,1.956,,,113,48,3.168,"{""action_items"": [{""owner"": ""Aisha"", ""task"": ""Restart demo environment"", ""due"": null}, {""owner"": ""Pedro"", ""task"": ""Message sales team"", ""due"": ""3 pm""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,12,DeepInfra,0.000295425,1,1.0,1.0,1.0,39.22,0.408,,,111,49,1.658,"{""action_items"": [{""owner"": ""Leo"", ""task"": ""Send contract to legal"", ""due"": ""today""}, {""owner"": ""Yuki"", ""task"": ""Follow up with legal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,13,Parasail,7.42e-05,1,1.0,1.0,1.0,81.58,0.372,,,98,7,0.458,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,14,Parasail,7.82e-05,1,1.0,1.0,1.0,391.02,0.56,,,106,7,0.578,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,15,Parasail,7.77e-05,1,1.0,1.0,1.0,75.36,0.482,,,105,7,0.575,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,16,DeepInfra,0.000102375,1,1.0,1.0,1.0,44.54,0.774,,,105,7,0.931,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,17,Parasail,7.82e-05,1,1.0,1.0,1.0,75.98,0.357,,,106,7,0.449,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,18,DeepInfra,6.825e-05,1,1.0,1.0,1.0,47.1,0.322,,,105,7,0.471,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,19,DeepInfra,0.00013545,1,1.0,1.0,1.0,43.53,0.591,,,101,30,1.28,"{""action_items"": [{""owner"": ""Dev"", ""task"": ""Update outdated screenshots in the onboarding guide"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,20,Parasail,0.0001569,1,1.0,1.0,1.0,64.26,0.461,,,105,29,0.913,"{""action_items"": [{""owner"": ""Hugo"", ""task"": ""Email the vendor about the delay"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,21,DeepInfra,0.00020775,1,1.0,1.0,1.0,41.55,0.395,,,115,52,1.646,"{""action_items"": [{""owner"": ""Priti"", ""task"": ""Fix the mobile layout bug"", ""due"": null}, {""owner"": ""Ethan"", ""task"": ""Review Priti's fix"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,22,Parasail,0.0001487,1,1.0,1.0,1.0,66.67,0.592,,,103,27,0.997,"{""action_items"": [{""owner"": ""Sofia"", ""task"": ""Send meeting notes"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,23,DeepInfra,0.0001278,1,1.0,1.0,1.0,37.62,0.463,,,104,27,1.181,"{""action_items"": [{""owner"": ""Alma"", ""task"": ""Test the backup script"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,24,DeepInfra,0.000129,1,1.0,1.0,1.0,39.4,0.363,,,100,28,1.073,"{""action_items"": [{""owner"": ""Jabu"", ""task"": ""Clean up the supplier list"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,25,Parasail,0.0004779,1,1.0,1.0,1.0,39.16,0.712,,,135,114,3.623,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bianca"",
+      ""task"": ""Finalize the logo"",
+      ""due"": ""Thursday""
+    },
+    {
+      ""owner"": ""Chen"",
+      ""task"": ""Print the flyers"",
+      ""due"": ""Friday""
+    },
+    {
+      ""owner"": ""Alex"",
+      ""task"": ""Book the room"",
+      ""due"": ""today""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,3,26,DeepInfra,0.000405,1,1.0,1.0,1.0,37.76,0.62,,,120,72,2.527,"{""action_items"": [{""owner"": ""Rosa"", ""task"": ""Write the introduction"", ""due"": ""Monday""}, {""owner"": ""Tobi"", ""task"": ""Handle the data analysis"", ""due"": ""Wednesday""}, {""owner"": ""Lucy"", ""task"": ""Do the references and formatting"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,27,DeepInfra,0.0002217,1,1.0,1.0,1.0,52.31,1.01,,,126,55,2.062,"{""action_items"": [{""owner"": ""Matteo"", ""task"": ""Fix the broken link on the pricing page"", ""due"": ""this morning""}, {""owner"": ""Hye"", ""task"": ""Update the FAQ"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,28,Parasail,0.0002405,1,1.0,1.0,1.0,65.49,0.461,,,121,50,1.224,"{""action_items"": [{""owner"": ""Jamal"", ""task"": ""Confirm the caterer"", ""due"": ""Tuesday""}, {""owner"": ""Nia"", ""task"": ""Send out the invitations"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,29,DeepInfra,0.0001908,1,1.0,1.0,1.0,40.49,0.413,,,104,48,1.599,"{""action_items"": [{""owner"": ""Felix"", ""task"": ""Draft the proposal"", ""due"": ""Thursday""}, {""owner"": ""Anya"", ""task"": ""Review the proposal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,30,DeepInfra,0.000578475,1,1.0,1.0,1.0,44.61,0.34,,,117,111,2.828,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Omar"",
+      ""task"": ""Update the changelog"",
+      ""due"": ""Monday""
+    },
+    {
+      ""owner"": ""Li"",
+      ""task"": ""Run the final tests"",
+      ""due"": ""Tuesday""
+    },
+    {
+      ""owner"": ""Beth"",
+      ""task"": ""Publish"",
+      ""due"": ""Wednesday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,3,31,DeepInfra,0.000199125,1,1.0,1.0,1.0,43.81,0.789,,,115,27,1.405,"{""action_items"": [{""owner"": ""Ruth"", ""task"": ""Send the invoice"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,32,DeepInfra,0.000197775,1,1.0,1.0,1.0,41.85,0.888,,,113,27,1.533,"{""action_items"": [{""owner"": ""Jin"", ""task"": ""Finish the prototype"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,33,Parasail,0.0001702,1,1.0,1.0,1.0,50.97,0.437,,,110,32,1.064,"{""action_items"": [{""owner"": ""Nora"", ""task"": ""Ask Kelly to cover the Saturday shift"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,34,Parasail,0.000163,1,1.0,1.0,1.0,30.89,0.38,,,110,30,1.351,"{""action_items"": [{""owner"": ""Lila"", ""task"": ""Schedule a call with the client"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,35,DeepInfra,6.96e-05,1,1.0,1.0,1.0,43.69,0.506,,,108,7,0.666,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,36,DeepInfra,0.00013215,1,0.0,0.0,0.0,42.33,0.707,,,107,28,1.368,"{""action_items"": [{""owner"": ""all"", ""task"": ""complete the safety training"", ""due"": ""this month""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,37,Parasail,0.0001554,1,1.0,1.0,1.0,67.28,0.379,,,102,29,0.81,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Approve the expense report"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,38,DeepInfra,0.000208125,1,1.0,1.0,1.0,44.59,0.53,,,115,29,1.18,"{""action_items"": [{""owner"": ""Elif"", ""task"": ""Look at the failing tests"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,39,DeepInfra,0.0002781,1,1.0,1.0,1.0,43.39,0.626,,,92,48,1.732,"{""action_items"": [{""owner"": ""Quinn"", ""task"": ""Send the agenda"", ""due"": ""Tuesday""}, {""owner"": ""Quinn"", ""task"": ""Send the minutes"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,40,DeepInfra,0.000107775,1,1.0,1.0,1.0,19.53,0.503,,,113,7,0.861,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,41,Parasail,0.0003583,1,1.0,1.0,1.0,59.27,0.675,,,191,73,1.906,"{""action_items"": [{""owner"": ""Dennis"", ""task"": ""Fix two Android bugs"", ""due"": ""Thursday""}, {""owner"": ""Priya"", ""task"": ""Capture screenshots for store page"", ""due"": ""next Tuesday""}, {""owner"": ""Monica"", ""task"": ""Write release notes"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,42,Parasail,0.0001754,1,1.0,1.0,1.0,65.86,0.377,,,142,29,0.817,"{""action_items"": [{""owner"": ""Gina"", ""task"": ""Email partners about launch date"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-397b-a17b,3,43,DeepInfra,0.000136125,1,1.0,1.0,1.0,12.73,1.106,,,155,7,1.656,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-397b-a17b,3,44,Parasail,0.0006673,1,1.0,1.0,1.0,43.91,0.682,,,197,158,4.28,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bao"",
+      ""task"": ""Book the lakeside venue"",
+      ""due"": ""20th""
+    },
+    {
+      ""owner"": ""Cole"",
+      ""task"": ""Provide a bus quote"",
+      ""due"": ""next Friday""
+    },
+    {
+      ""owner"": ""Faith"",
+      ""task"": ""Draft schedule of activities"",
+      ""due"": ""this week""
+    },
+    {
+      ""owner"": ""Ingrid"",
+      ""task"": ""Announce the date to the whole company"",
+      ""due"": ""Monday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-397b-a17b,3,45,DeepInfra,0.00032025,1,1.0,1.0,1.0,43.18,0.623,,,125,88,2.661,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Wanda"",
+      ""task"": ""Clean out the break room fridge"",
+      ""due"": ""after lunch""
+    },
+    {
+      ""owner"": ""Tyler"",
+      ""task"": ""Buy new filters for the coffee machine"",
+      ""due"": ""tomorrow""
+    }
+  ]
+}"

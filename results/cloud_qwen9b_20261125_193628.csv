@@ -1,0 +1,205 @@
+backend,model,run,id,provider,cost_usd,valid_json,precision,recall,f1,tokens_per_s,ttft_s,server_tokens_per_s,server_prompt_s,prompt_tokens,output_tokens,wall_s,output
+openrouter,qwen/qwen3.5-9b,1,1,Parasail,2.365e-05,1,1.0,1.0,1.0,162.24,0.303,,,109,51,0.618,"{""action_items"": [{""owner"": ""Sam"", ""task"": ""Send budget draft to Priya"", ""due"": ""Friday""}, {""owner"": ""Priya"", ""task"": ""Book the venue"", ""due"": ""Next Monday""}]}"
+openrouter,qwen/qwen3.5-9b,1,2,Parasail,1.695e-05,1,1.0,1.0,1.0,172.92,0.302,,,102,27,0.458,"{""action_items"": [{""owner"": ""Elena"", ""task"": ""Check server logs"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-9b,1,3,Parasail,2.39e-05,1,1.0,1.0,1.0,160.37,0.414,,,114,50,0.725,"{""action_items"": [{""owner"": ""Tariq"", ""task"": ""Review slides"", ""due"": ""Wednesday""}, {""owner"": ""Joan"", ""task"": ""Upload slides to shared drive"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-9b,1,4,Parasail,2.58e-05,1,1.0,1.0,1.0,163.35,0.297,,,118,56,0.64,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Prepare and send revised quote"", ""due"": ""end of day""}, {""owner"": ""Mei"", ""task"": ""Call client to inform them"", ""due"": ""tomorrow morning""}]}"
+openrouter,qwen/qwen3.5-9b,1,5,Parasail,2.415e-05,1,1.0,1.0,1.0,164.16,0.303,,,114,51,0.613,"{""action_items"": [{""owner"": ""Lena"", ""task"": ""Finish testing login fix"", ""due"": ""Tuesday""}, {""owner"": ""Noah"", ""task"": ""Deploy login fix to production"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,1,6,Parasail,1.91e-05,1,1.0,1.0,1.0,160.03,0.34,,,111,32,0.54,"{""action_items"": [{""owner"": ""Raj"", ""task"": ""Get three quotes for new laptops"", ""due"": ""15th""}]}"
+openrouter,qwen/qwen3.5-9b,1,7,DeepInfra,1.8e-05,1,1.0,1.0,1.0,19.42,0.506,,,111,46,2.875,"{""action_items"": [{""owner"": ""Ben"", ""task"": ""Write intro paragraph"", ""due"": ""Monday""}, {""owner"": ""Fatima"", ""task"": ""Collect photos"", ""due"": ""Tuesday""}]}"
+openrouter,qwen/qwen3.5-9b,1,8,Parasail,1.755e-05,1,1.0,1.0,1.0,156.41,0.41,,,103,29,0.596,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Call the repair company"", ""due"": ""this afternoon""}]}"
+openrouter,qwen/qwen3.5-9b,1,9,Parasail,2.42e-05,1,1.0,1.0,1.0,162.39,0.291,,,117,50,0.599,"{""action_items"": [{""owner"": ""Kofi"", ""task"": ""Transfer studio rent payment"", ""due"": ""1st""}, {""owner"": ""Isabel"", ""task"": ""Update budget sheet"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,1,10,Parasail,1.79e-05,1,1.0,1.0,1.0,167.03,0.289,,,109,28,0.457,"{""action_items"": [{""owner"": ""Victor"", ""task"": ""Send reminder email"", ""due"": ""next Tuesday""}]}"
+openrouter,qwen/qwen3.5-9b,1,11,Parasail,2.38e-05,1,0.5,0.5,0.5,161.99,0.286,,,113,50,0.594,"{""action_items"": [{""owner"": ""Aisha"", ""task"": ""Restart the demo environment"", ""due"": null}, {""owner"": ""Pedro"", ""task"": ""Message the sales team"", ""due"": ""3 pm""}]}"
+openrouter,qwen/qwen3.5-9b,1,12,Parasail,2.335e-05,1,1.0,1.0,1.0,166.14,0.284,,,111,49,0.579,"{""action_items"": [{""owner"": ""Leo"", ""task"": ""Send contract to legal"", ""due"": ""today""}, {""owner"": ""Yuki"", ""task"": ""Follow up with legal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,1,13,Parasail,1.155e-05,1,1.0,1.0,1.0,173.11,0.289,,,98,7,0.33,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,14,Parasail,1.235e-05,1,1.0,1.0,1.0,153.81,0.294,,,106,7,0.339,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,15,Parasail,1.225e-05,1,1.0,1.0,1.0,123.43,0.291,,,105,7,0.348,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,16,Parasail,1.225e-05,1,1.0,1.0,1.0,171.42,0.279,,,105,7,0.32,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,17,Parasail,1.235e-05,1,1.0,1.0,1.0,176.52,0.296,,,106,7,0.336,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,18,Parasail,1.225e-05,1,1.0,1.0,1.0,168.5,0.282,,,105,7,0.323,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,19,Parasail,1.735e-05,1,1.0,1.0,1.0,166.69,0.314,,,101,29,0.488,"{""action_items"": [{""owner"": ""Dev"", ""task"": ""Update outdated screenshots in onboarding guide"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,1,20,Parasail,1.775e-05,1,1.0,1.0,1.0,167.58,0.282,,,105,29,0.455,"{""action_items"": [{""owner"": ""Hugo"", ""task"": ""Email the vendor about the delay"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,1,21,Parasail,2.425e-05,1,1.0,1.0,1.0,111.88,0.73,,,115,51,1.186,"{""action_items"": [{""owner"": ""Priti"", ""task"": ""Fix mobile layout bug"", ""due"": null}, {""owner"": ""Ethan"", ""task"": ""Review Priti's fix"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,1,22,Parasail,1.705e-05,1,1.0,1.0,1.0,164.56,0.343,,,103,27,0.507,"{""action_items"": [{""owner"": ""Sofia"", ""task"": ""Send meeting notes"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,1,23,Parasail,1.69e-05,1,1.0,1.0,1.0,123.39,0.296,,,104,26,0.506,"{""action_items"": [{""owner"": ""Alma"", ""task"": ""Test backup script"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,1,24,Parasail,1.7e-05,1,1.0,1.0,1.0,157.28,0.358,,,100,28,0.536,"{""action_items"": [{""owner"": ""Jabu"", ""task"": ""Clean up the supplier list"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,1,25,Parasail,3.1e-05,1,1.0,1.0,1.0,180.07,0.327,,,135,70,0.716,"{""action_items"": [{""owner"": ""Bianca"", ""task"": ""Finalize the logo"", ""due"": ""Thursday""}, {""owner"": ""Chen"", ""task"": ""Print the flyers"", ""due"": ""Friday""}, {""owner"": ""Alex"", ""task"": ""Book the room"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-9b,1,26,Parasail,3e-05,1,1.0,1.0,1.0,168.26,0.281,,,120,72,0.709,"{""action_items"": [{""owner"": ""Rosa"", ""task"": ""Write the introduction"", ""due"": ""Monday""}, {""owner"": ""Tobi"", ""task"": ""Handle the data analysis"", ""due"": ""Wednesday""}, {""owner"": ""Lucy"", ""task"": ""Do the references and formatting"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,1,27,Parasail,2.56e-05,1,1.0,1.0,1.0,168.95,0.298,,,126,52,0.606,"{""action_items"": [{""owner"": ""Matteo"", ""task"": ""Fix broken link on pricing page"", ""due"": ""this morning""}, {""owner"": ""Hye"", ""task"": ""Update FAQ"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,1,28,Parasail,2.46e-05,1,1.0,1.0,1.0,145.59,0.351,,,121,50,0.694,"{""action_items"": [{""owner"": ""Jamal"", ""task"": ""Confirm the caterer"", ""due"": ""Tuesday""}, {""owner"": ""Nia"", ""task"": ""Send out the invitations"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,1,29,Parasail,2.24e-05,1,1.0,1.0,1.0,163.54,0.307,,,104,48,0.601,"{""action_items"": [{""owner"": ""Felix"", ""task"": ""Draft the proposal"", ""due"": ""Thursday""}, {""owner"": ""Anya"", ""task"": ""Review the proposal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,1,30,Parasail,2.82e-05,1,1.0,1.0,1.0,166.78,0.28,,,117,66,0.675,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Update changelog"", ""due"": ""Monday""}, {""owner"": ""Li"", ""task"": ""Run final tests"", ""due"": ""Tuesday""}, {""owner"": ""Beth"", ""task"": ""Publish release"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,1,31,Parasail,1.825e-05,1,1.0,1.0,1.0,170.32,0.328,,,115,27,0.486,"{""action_items"": [{""owner"": ""Ruth"", ""task"": ""Send the invoice"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,1,32,Parasail,1.805e-05,1,1.0,1.0,1.0,161.27,0.46,,,113,27,0.628,"{""action_items"": [{""owner"": ""Jin"", ""task"": ""Finish the prototype"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,1,33,Parasail,1.9e-05,1,1.0,1.0,1.0,163.93,0.278,,,110,32,0.473,"{""action_items"": [{""owner"": ""Nora"", ""task"": ""Ask Kelly to cover the Saturday shift"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,1,34,Parasail,1.825e-05,1,1.0,1.0,1.0,158.21,0.316,,,110,29,0.5,"{""action_items"": [{""owner"": ""Lila"", ""task"": ""Schedule a call for Thursday"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-9b,1,35,Parasail,1.255e-05,1,1.0,1.0,1.0,205.26,0.308,,,108,7,0.342,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,36,Parasail,2.295e-05,1,0.0,0.0,0.0,168.36,0.293,,,107,49,0.584,"{""action_items"": [{""owner"": ""Uma"", ""task"": ""Complete safety training"", ""due"": ""this month""}, {""owner"": ""Kai"", ""task"": ""Complete safety training"", ""due"": ""this month""}]}"
+openrouter,qwen/qwen3.5-9b,1,37,Parasail,1.72e-05,1,1.0,1.0,1.0,161.27,0.283,,,102,28,0.456,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Approve expense report"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,1,38,Parasail,1.85e-05,1,1.0,1.0,1.0,106.94,0.308,,,115,28,0.57,"{""action_items"": [{""owner"": ""Elif"", ""task"": ""Look at failing tests"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-9b,1,39,Parasail,2.07e-05,1,1.0,1.0,1.0,167.59,0.291,,,92,46,0.566,"{""action_items"": [{""owner"": ""Quinn"", ""task"": ""Send agenda"", ""due"": ""Tuesday""}, {""owner"": ""Quinn"", ""task"": ""Send minutes"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,1,40,Parasail,1.305e-05,1,1.0,1.0,1.0,170.4,0.296,,,113,7,0.337,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,41,Parasail,3.735e-05,1,1.0,1.0,1.0,168.03,0.309,,,191,73,0.744,"{""action_items"": [{""owner"": ""Dennis"", ""task"": ""Fix two Android bugs"", ""due"": ""Thursday""}, {""owner"": ""Priya"", ""task"": ""Capture screenshots for store page"", ""due"": ""next Tuesday""}, {""owner"": ""Monica"", ""task"": ""Write release notes"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,1,42,Parasail,2.22e-05,1,1.0,1.0,1.0,149.11,0.302,,,142,32,0.516,"{""action_items"": [{""owner"": ""Gina"", ""task"": ""Email partners about March 3rd launch"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-9b,1,43,Parasail,1.725e-05,1,1.0,1.0,1.0,165.55,0.433,,,155,7,0.475,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,1,44,Parasail,5.97e-05,1,1.0,1.0,1.0,167.22,0.355,,,197,160,1.312,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bao"",
+      ""task"": ""Book the lakeside venue"",
+      ""due"": ""20th""
+    },
+    {
+      ""owner"": ""Cole"",
+      ""task"": ""Arrange transportation and provide bus quote"",
+      ""due"": ""next Friday""
+    },
+    {
+      ""owner"": ""Faith"",
+      ""task"": ""Draft activity schedule"",
+      ""due"": ""this week""
+    },
+    {
+      ""owner"": ""Ingrid"",
+      ""task"": ""Announce offsite date to the whole company"",
+      ""due"": ""Monday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-9b,1,45,Parasail,2.6e-05,1,1.0,1.0,1.0,165.4,0.295,,,125,54,0.621,"{""action_items"": [{""owner"": ""Wanda"", ""task"": ""Clean out the break room fridge"", ""due"": ""after lunch""}, {""owner"": ""Tyler"", ""task"": ""Buy new coffee machine filters"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,2,1,Parasail,2.365e-05,1,1.0,1.0,1.0,167.87,0.29,,,109,51,0.594,"{""action_items"": [{""owner"": ""Sam"", ""task"": ""Send budget draft to Priya"", ""due"": ""Friday""}, {""owner"": ""Priya"", ""task"": ""Book the venue"", ""due"": ""Next Monday""}]}"
+openrouter,qwen/qwen3.5-9b,2,2,Parasail,1.695e-05,1,1.0,1.0,1.0,157.8,0.281,,,102,27,0.452,"{""action_items"": [{""owner"": ""Elena"", ""task"": ""Check server logs"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-9b,2,3,Parasail,2.39e-05,1,1.0,1.0,1.0,163.32,0.373,,,114,50,0.679,"{""action_items"": [{""owner"": ""Tariq"", ""task"": ""Review slides"", ""due"": ""Wednesday""}, {""owner"": ""Joan"", ""task"": ""Upload slides to shared drive"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-9b,2,4,Parasail,2.58e-05,1,1.0,1.0,1.0,140.35,0.413,,,118,56,0.812,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Prepare and send revised quote"", ""due"": ""end of day""}, {""owner"": ""Mei"", ""task"": ""Call client to inform them"", ""due"": ""tomorrow morning""}]}"
+openrouter,qwen/qwen3.5-9b,2,5,Parasail,2.415e-05,1,1.0,1.0,1.0,145.62,0.28,,,114,51,0.63,"{""action_items"": [{""owner"": ""Lena"", ""task"": ""Finish testing login fix"", ""due"": ""Tuesday""}, {""owner"": ""Noah"", ""task"": ""Deploy login fix to production"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,2,6,Parasail,1.91e-05,1,1.0,1.0,1.0,155.47,0.281,,,111,32,0.487,"{""action_items"": [{""owner"": ""Raj"", ""task"": ""Get three quotes for new laptops"", ""due"": ""15th""}]}"
+openrouter,qwen/qwen3.5-9b,2,7,Parasail,2.26e-05,1,1.0,1.0,1.0,159.04,0.284,,,111,46,0.573,"{""action_items"": [{""owner"": ""Ben"", ""task"": ""Write intro paragraph"", ""due"": ""Monday""}, {""owner"": ""Fatima"", ""task"": ""Collect photos"", ""due"": ""Tuesday""}]}"
+openrouter,qwen/qwen3.5-9b,2,8,Parasail,1.755e-05,1,1.0,1.0,1.0,168.14,0.283,,,103,29,0.455,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Call the repair company"", ""due"": ""this afternoon""}]}"
+openrouter,qwen/qwen3.5-9b,2,9,Parasail,2.42e-05,1,1.0,1.0,1.0,156.16,0.291,,,117,50,0.611,"{""action_items"": [{""owner"": ""Kofi"", ""task"": ""Transfer studio rent payment"", ""due"": ""1st""}, {""owner"": ""Isabel"", ""task"": ""Update budget sheet"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,2,10,Parasail,1.79e-05,1,1.0,1.0,1.0,164.04,0.299,,,109,28,0.47,"{""action_items"": [{""owner"": ""Victor"", ""task"": ""Send reminder email"", ""due"": ""next Tuesday""}]}"
+openrouter,qwen/qwen3.5-9b,2,11,Parasail,2.38e-05,1,0.5,0.5,0.5,162.11,0.269,,,113,50,0.577,"{""action_items"": [{""owner"": ""Aisha"", ""task"": ""Restart the demo environment"", ""due"": null}, {""owner"": ""Pedro"", ""task"": ""Message the sales team"", ""due"": ""3 pm""}]}"
+openrouter,qwen/qwen3.5-9b,2,12,Parasail,2.335e-05,1,1.0,1.0,1.0,178.92,0.303,,,111,49,0.577,"{""action_items"": [{""owner"": ""Leo"", ""task"": ""Send contract to legal"", ""due"": ""today""}, {""owner"": ""Yuki"", ""task"": ""Follow up with legal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,2,13,Parasail,1.155e-05,1,1.0,1.0,1.0,147.08,0.288,,,98,7,0.336,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,14,Parasail,1.235e-05,1,1.0,1.0,1.0,152.47,0.301,,,106,7,0.347,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,15,Parasail,1.225e-05,1,1.0,1.0,1.0,128.88,0.322,,,105,7,0.377,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,16,Parasail,1.225e-05,1,1.0,1.0,1.0,154.26,0.342,,,105,7,0.387,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,17,Parasail,1.235e-05,1,1.0,1.0,1.0,151.31,0.291,,,106,7,0.337,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,18,Parasail,1.225e-05,1,1.0,1.0,1.0,147.14,0.273,,,105,7,0.32,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,19,Parasail,1.735e-05,1,1.0,1.0,1.0,165.47,0.324,,,101,29,0.499,"{""action_items"": [{""owner"": ""Dev"", ""task"": ""Update outdated screenshots in onboarding guide"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,2,20,Parasail,1.775e-05,1,1.0,1.0,1.0,165.35,0.33,,,105,29,0.506,"{""action_items"": [{""owner"": ""Hugo"", ""task"": ""Email the vendor about the delay"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,2,21,Parasail,2.425e-05,1,1.0,1.0,1.0,168.7,0.283,,,115,51,0.586,"{""action_items"": [{""owner"": ""Priti"", ""task"": ""Fix mobile layout bug"", ""due"": null}, {""owner"": ""Ethan"", ""task"": ""Review Priti's fix"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,2,22,Parasail,1.705e-05,1,1.0,1.0,1.0,152.88,0.288,,,103,27,0.465,"{""action_items"": [{""owner"": ""Sofia"", ""task"": ""Send meeting notes"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,2,23,Parasail,1.69e-05,1,1.0,1.0,1.0,121.86,0.277,,,104,26,0.49,"{""action_items"": [{""owner"": ""Alma"", ""task"": ""Test backup script"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,2,24,Parasail,1.7e-05,1,1.0,1.0,1.0,136.14,0.449,,,100,28,0.654,"{""action_items"": [{""owner"": ""Jabu"", ""task"": ""Clean up the supplier list"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,2,25,Parasail,3.1e-05,1,1.0,1.0,1.0,148.89,0.294,,,135,70,0.764,"{""action_items"": [{""owner"": ""Bianca"", ""task"": ""Finalize the logo"", ""due"": ""Thursday""}, {""owner"": ""Chen"", ""task"": ""Print the flyers"", ""due"": ""Friday""}, {""owner"": ""Alex"", ""task"": ""Book the room"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-9b,2,26,Parasail,3e-05,1,1.0,1.0,1.0,161.89,0.376,,,120,72,0.821,"{""action_items"": [{""owner"": ""Rosa"", ""task"": ""Write the introduction"", ""due"": ""Monday""}, {""owner"": ""Tobi"", ""task"": ""Handle the data analysis"", ""due"": ""Wednesday""}, {""owner"": ""Lucy"", ""task"": ""Do the references and formatting"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,2,27,Parasail,2.56e-05,1,1.0,1.0,1.0,167.18,0.296,,,126,52,0.607,"{""action_items"": [{""owner"": ""Matteo"", ""task"": ""Fix broken link on pricing page"", ""due"": ""this morning""}, {""owner"": ""Hye"", ""task"": ""Update FAQ"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,2,28,Parasail,2.46e-05,1,1.0,1.0,1.0,166.99,0.279,,,121,50,0.579,"{""action_items"": [{""owner"": ""Jamal"", ""task"": ""Confirm the caterer"", ""due"": ""Tuesday""}, {""owner"": ""Nia"", ""task"": ""Send out the invitations"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,2,29,Parasail,2.24e-05,1,1.0,1.0,1.0,165.13,0.276,,,104,48,0.567,"{""action_items"": [{""owner"": ""Felix"", ""task"": ""Draft the proposal"", ""due"": ""Thursday""}, {""owner"": ""Anya"", ""task"": ""Review the proposal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,2,30,Parasail,2.82e-05,1,1.0,1.0,1.0,163.79,0.288,,,117,66,0.691,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Update changelog"", ""due"": ""Monday""}, {""owner"": ""Li"", ""task"": ""Run final tests"", ""due"": ""Tuesday""}, {""owner"": ""Beth"", ""task"": ""Publish release"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,2,31,Parasail,1.825e-05,1,1.0,1.0,1.0,166.72,0.289,,,115,27,0.451,"{""action_items"": [{""owner"": ""Ruth"", ""task"": ""Send the invoice"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,2,32,Parasail,1.805e-05,1,1.0,1.0,1.0,176.04,0.297,,,113,27,0.45,"{""action_items"": [{""owner"": ""Jin"", ""task"": ""Finish the prototype"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,2,33,Parasail,1.9e-05,1,1.0,1.0,1.0,124.62,0.338,,,110,32,0.595,"{""action_items"": [{""owner"": ""Nora"", ""task"": ""Ask Kelly to cover the Saturday shift"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,2,34,Parasail,1.825e-05,1,1.0,1.0,1.0,148.14,0.335,,,110,29,0.53,"{""action_items"": [{""owner"": ""Lila"", ""task"": ""Schedule a call for Thursday"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-9b,2,35,Parasail,1.255e-05,1,1.0,1.0,1.0,180.66,0.31,,,108,7,0.349,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,36,Parasail,2.295e-05,1,0.0,0.0,0.0,182.24,0.325,,,107,49,0.594,"{""action_items"": [{""owner"": ""Uma"", ""task"": ""Complete safety training"", ""due"": ""this month""}, {""owner"": ""Kai"", ""task"": ""Complete safety training"", ""due"": ""this month""}]}"
+openrouter,qwen/qwen3.5-9b,2,37,Parasail,1.72e-05,1,1.0,1.0,1.0,166.11,0.281,,,102,28,0.45,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Approve expense report"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,2,38,Parasail,1.85e-05,1,1.0,1.0,1.0,172.48,0.306,,,115,28,0.469,"{""action_items"": [{""owner"": ""Elif"", ""task"": ""Look at failing tests"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-9b,2,39,Parasail,2.07e-05,1,1.0,1.0,1.0,164.69,0.278,,,92,46,0.557,"{""action_items"": [{""owner"": ""Quinn"", ""task"": ""Send agenda"", ""due"": ""Tuesday""}, {""owner"": ""Quinn"", ""task"": ""Send minutes"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,2,40,Parasail,1.305e-05,1,1.0,1.0,1.0,174.44,0.293,,,113,7,0.333,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,41,Parasail,3.735e-05,1,1.0,1.0,1.0,175.6,0.313,,,191,73,0.729,"{""action_items"": [{""owner"": ""Dennis"", ""task"": ""Fix two Android bugs"", ""due"": ""Thursday""}, {""owner"": ""Priya"", ""task"": ""Capture screenshots for store page"", ""due"": ""next Tuesday""}, {""owner"": ""Monica"", ""task"": ""Write release notes"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,2,42,Parasail,2.22e-05,1,1.0,1.0,1.0,124.17,0.279,,,142,32,0.537,"{""action_items"": [{""owner"": ""Gina"", ""task"": ""Email partners about March 3rd launch"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-9b,2,43,Parasail,1.725e-05,1,1.0,1.0,1.0,159.53,0.351,,,155,7,0.395,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,2,44,Parasail,5.97e-05,1,1.0,1.0,1.0,149.73,0.302,,,197,160,1.371,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bao"",
+      ""task"": ""Book the lakeside venue"",
+      ""due"": ""20th""
+    },
+    {
+      ""owner"": ""Cole"",
+      ""task"": ""Arrange transportation and provide bus quote"",
+      ""due"": ""next Friday""
+    },
+    {
+      ""owner"": ""Faith"",
+      ""task"": ""Draft activity schedule"",
+      ""due"": ""this week""
+    },
+    {
+      ""owner"": ""Ingrid"",
+      ""task"": ""Announce offsite date to the whole company"",
+      ""due"": ""Monday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-9b,2,45,Parasail,2.6e-05,1,1.0,1.0,1.0,148.8,0.346,,,125,54,0.709,"{""action_items"": [{""owner"": ""Wanda"", ""task"": ""Clean out the break room fridge"", ""due"": ""after lunch""}, {""owner"": ""Tyler"", ""task"": ""Buy new coffee machine filters"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,3,1,Parasail,2.365e-05,1,1.0,1.0,1.0,150.19,0.317,,,109,51,0.656,"{""action_items"": [{""owner"": ""Sam"", ""task"": ""Send budget draft to Priya"", ""due"": ""Friday""}, {""owner"": ""Priya"", ""task"": ""Book the venue"", ""due"": ""Next Monday""}]}"
+openrouter,qwen/qwen3.5-9b,3,2,Parasail,1.695e-05,1,1.0,1.0,1.0,192.62,0.326,,,102,27,0.466,"{""action_items"": [{""owner"": ""Elena"", ""task"": ""Check server logs"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-9b,3,3,Parasail,2.39e-05,1,1.0,1.0,1.0,143.8,0.271,,,114,50,0.619,"{""action_items"": [{""owner"": ""Tariq"", ""task"": ""Review slides"", ""due"": ""Wednesday""}, {""owner"": ""Joan"", ""task"": ""Upload slides to shared drive"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-9b,3,4,Parasail,2.58e-05,1,1.0,1.0,1.0,157.63,0.311,,,118,56,0.666,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Prepare and send revised quote"", ""due"": ""end of day""}, {""owner"": ""Mei"", ""task"": ""Call client to inform them"", ""due"": ""tomorrow morning""}]}"
+openrouter,qwen/qwen3.5-9b,3,5,Parasail,2.415e-05,1,1.0,1.0,1.0,155.39,0.275,,,114,51,0.603,"{""action_items"": [{""owner"": ""Lena"", ""task"": ""Finish testing login fix"", ""due"": ""Tuesday""}, {""owner"": ""Noah"", ""task"": ""Deploy login fix to production"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,3,6,Parasail,1.91e-05,1,1.0,1.0,1.0,163.17,0.327,,,111,32,0.523,"{""action_items"": [{""owner"": ""Raj"", ""task"": ""Get three quotes for new laptops"", ""due"": ""15th""}]}"
+openrouter,qwen/qwen3.5-9b,3,7,Parasail,2.26e-05,1,1.0,1.0,1.0,155.22,0.292,,,111,46,0.589,"{""action_items"": [{""owner"": ""Ben"", ""task"": ""Write intro paragraph"", ""due"": ""Monday""}, {""owner"": ""Fatima"", ""task"": ""Collect photos"", ""due"": ""Tuesday""}]}"
+openrouter,qwen/qwen3.5-9b,3,8,Parasail,1.755e-05,1,1.0,1.0,1.0,83.23,0.275,,,103,29,0.624,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Call the repair company"", ""due"": ""this afternoon""}]}"
+openrouter,qwen/qwen3.5-9b,3,9,Parasail,2.42e-05,1,1.0,1.0,1.0,159.09,0.28,,,117,50,0.594,"{""action_items"": [{""owner"": ""Kofi"", ""task"": ""Transfer studio rent payment"", ""due"": ""1st""}, {""owner"": ""Isabel"", ""task"": ""Update budget sheet"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,3,10,Parasail,1.79e-05,1,1.0,1.0,1.0,158.56,0.27,,,109,28,0.446,"{""action_items"": [{""owner"": ""Victor"", ""task"": ""Send reminder email"", ""due"": ""next Tuesday""}]}"
+openrouter,qwen/qwen3.5-9b,3,11,Parasail,2.38e-05,1,0.5,0.5,0.5,155.98,0.309,,,113,50,0.63,"{""action_items"": [{""owner"": ""Aisha"", ""task"": ""Restart the demo environment"", ""due"": null}, {""owner"": ""Pedro"", ""task"": ""Message the sales team"", ""due"": ""3 pm""}]}"
+openrouter,qwen/qwen3.5-9b,3,12,Parasail,2.335e-05,1,1.0,1.0,1.0,151.3,0.332,,,111,49,0.656,"{""action_items"": [{""owner"": ""Leo"", ""task"": ""Send contract to legal"", ""due"": ""today""}, {""owner"": ""Yuki"", ""task"": ""Follow up with legal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,3,13,Parasail,1.155e-05,1,1.0,1.0,1.0,166.75,0.301,,,98,7,0.343,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,14,Parasail,1.235e-05,1,1.0,1.0,1.0,167.84,0.295,,,106,7,0.337,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,15,Parasail,1.225e-05,1,1.0,1.0,1.0,154.43,0.312,,,105,7,0.358,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,16,Parasail,1.225e-05,1,1.0,1.0,1.0,137.86,0.303,,,105,7,0.353,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,17,Parasail,1.235e-05,1,1.0,1.0,1.0,156.83,0.348,,,106,7,0.393,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,18,Parasail,1.225e-05,1,1.0,1.0,1.0,145.74,0.458,,,105,7,0.506,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,19,Parasail,1.735e-05,1,1.0,1.0,1.0,156.34,0.278,,,101,29,0.464,"{""action_items"": [{""owner"": ""Dev"", ""task"": ""Update outdated screenshots in onboarding guide"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,3,20,Parasail,1.775e-05,1,1.0,1.0,1.0,171.03,0.297,,,105,29,0.466,"{""action_items"": [{""owner"": ""Hugo"", ""task"": ""Email the vendor about the delay"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,3,21,Parasail,2.425e-05,1,1.0,1.0,1.0,136.01,0.298,,,115,51,0.673,"{""action_items"": [{""owner"": ""Priti"", ""task"": ""Fix mobile layout bug"", ""due"": null}, {""owner"": ""Ethan"", ""task"": ""Review Priti's fix"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,3,22,Parasail,1.705e-05,1,1.0,1.0,1.0,156.11,0.291,,,103,27,0.464,"{""action_items"": [{""owner"": ""Sofia"", ""task"": ""Send meeting notes"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,3,23,Parasail,1.69e-05,1,1.0,1.0,1.0,167.72,0.311,,,104,26,0.466,"{""action_items"": [{""owner"": ""Alma"", ""task"": ""Test backup script"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,3,24,Parasail,1.7e-05,1,1.0,1.0,1.0,161.07,0.319,,,100,28,0.493,"{""action_items"": [{""owner"": ""Jabu"", ""task"": ""Clean up the supplier list"", ""due"": null}]}"
+openrouter,qwen/qwen3.5-9b,3,25,Parasail,3.1e-05,1,1.0,1.0,1.0,161.96,0.296,,,135,70,0.728,"{""action_items"": [{""owner"": ""Bianca"", ""task"": ""Finalize the logo"", ""due"": ""Thursday""}, {""owner"": ""Chen"", ""task"": ""Print the flyers"", ""due"": ""Friday""}, {""owner"": ""Alex"", ""task"": ""Book the room"", ""due"": ""today""}]}"
+openrouter,qwen/qwen3.5-9b,3,26,Parasail,3e-05,1,1.0,1.0,1.0,157.17,0.277,,,120,72,0.735,"{""action_items"": [{""owner"": ""Rosa"", ""task"": ""Write the introduction"", ""due"": ""Monday""}, {""owner"": ""Tobi"", ""task"": ""Handle the data analysis"", ""due"": ""Wednesday""}, {""owner"": ""Lucy"", ""task"": ""Do the references and formatting"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,3,27,Parasail,2.56e-05,1,1.0,1.0,1.0,157.15,0.301,,,126,52,0.632,"{""action_items"": [{""owner"": ""Matteo"", ""task"": ""Fix broken link on pricing page"", ""due"": ""this morning""}, {""owner"": ""Hye"", ""task"": ""Update FAQ"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,3,28,Parasail,2.46e-05,1,1.0,1.0,1.0,165.11,0.313,,,121,50,0.616,"{""action_items"": [{""owner"": ""Jamal"", ""task"": ""Confirm the caterer"", ""due"": ""Tuesday""}, {""owner"": ""Nia"", ""task"": ""Send out the invitations"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,3,29,Parasail,2.24e-05,1,1.0,1.0,1.0,143.33,0.277,,,104,48,0.612,"{""action_items"": [{""owner"": ""Felix"", ""task"": ""Draft the proposal"", ""due"": ""Thursday""}, {""owner"": ""Anya"", ""task"": ""Review the proposal"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,3,30,Parasail,2.82e-05,1,1.0,1.0,1.0,129.84,0.342,,,117,66,0.85,"{""action_items"": [{""owner"": ""Omar"", ""task"": ""Update changelog"", ""due"": ""Monday""}, {""owner"": ""Li"", ""task"": ""Run final tests"", ""due"": ""Tuesday""}, {""owner"": ""Beth"", ""task"": ""Publish release"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,3,31,Parasail,1.825e-05,1,1.0,1.0,1.0,150.12,0.299,,,115,27,0.479,"{""action_items"": [{""owner"": ""Ruth"", ""task"": ""Send the invoice"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,3,32,Parasail,1.805e-05,1,1.0,1.0,1.0,172.7,0.29,,,113,27,0.446,"{""action_items"": [{""owner"": ""Jin"", ""task"": ""Finish the prototype"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,3,33,Parasail,1.9e-05,1,1.0,1.0,1.0,147.48,0.284,,,110,32,0.501,"{""action_items"": [{""owner"": ""Nora"", ""task"": ""Ask Kelly to cover the Saturday shift"", ""due"": ""tomorrow""}]}"
+openrouter,qwen/qwen3.5-9b,3,34,Parasail,1.825e-05,1,1.0,1.0,1.0,153.02,0.287,,,110,29,0.477,"{""action_items"": [{""owner"": ""Lila"", ""task"": ""Schedule a call for Thursday"", ""due"": ""Thursday""}]}"
+openrouter,qwen/qwen3.5-9b,3,35,Parasail,1.255e-05,1,1.0,1.0,1.0,80.08,0.29,,,108,7,0.377,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,36,Parasail,2.295e-05,1,0.0,0.0,0.0,153.3,0.278,,,107,49,0.598,"{""action_items"": [{""owner"": ""Uma"", ""task"": ""Complete safety training"", ""due"": ""this month""}, {""owner"": ""Kai"", ""task"": ""Complete safety training"", ""due"": ""this month""}]}"
+openrouter,qwen/qwen3.5-9b,3,37,Parasail,1.72e-05,1,1.0,1.0,1.0,159.08,0.293,,,102,28,0.469,"{""action_items"": [{""owner"": ""Dana"", ""task"": ""Approve expense report"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,3,38,Parasail,1.85e-05,1,1.0,1.0,1.0,158.68,0.32,,,115,28,0.496,"{""action_items"": [{""owner"": ""Elif"", ""task"": ""Look at failing tests"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-9b,3,39,Parasail,2.07e-05,1,1.0,1.0,1.0,163.14,0.425,,,92,46,0.707,"{""action_items"": [{""owner"": ""Quinn"", ""task"": ""Send agenda"", ""due"": ""Tuesday""}, {""owner"": ""Quinn"", ""task"": ""Send minutes"", ""due"": ""Friday""}]}"
+openrouter,qwen/qwen3.5-9b,3,40,Parasail,1.305e-05,1,1.0,1.0,1.0,126.72,0.311,,,113,7,0.366,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,41,Parasail,3.735e-05,1,1.0,1.0,1.0,161.29,0.284,,,191,73,0.736,"{""action_items"": [{""owner"": ""Dennis"", ""task"": ""Fix two Android bugs"", ""due"": ""Thursday""}, {""owner"": ""Priya"", ""task"": ""Capture screenshots for store page"", ""due"": ""next Tuesday""}, {""owner"": ""Monica"", ""task"": ""Write release notes"", ""due"": ""Wednesday""}]}"
+openrouter,qwen/qwen3.5-9b,3,42,Parasail,2.22e-05,1,1.0,1.0,1.0,188.47,0.315,,,142,32,0.485,"{""action_items"": [{""owner"": ""Gina"", ""task"": ""Email partners about March 3rd launch"", ""due"": ""Monday""}]}"
+openrouter,qwen/qwen3.5-9b,3,43,Parasail,1.725e-05,1,1.0,1.0,1.0,139.96,0.28,,,155,7,0.33,"{""action_items"": []}"
+openrouter,qwen/qwen3.5-9b,3,44,Parasail,5.97e-05,1,1.0,1.0,1.0,161.42,0.348,,,197,160,1.339,"{
+  ""action_items"": [
+    {
+      ""owner"": ""Bao"",
+      ""task"": ""Book the lakeside venue"",
+      ""due"": ""20th""
+    },
+    {
+      ""owner"": ""Cole"",
+      ""task"": ""Arrange transportation and provide bus quote"",
+      ""due"": ""next Friday""
+    },
+    {
+      ""owner"": ""Faith"",
+      ""task"": ""Draft activity schedule"",
+      ""due"": ""this week""
+    },
+    {
+      ""owner"": ""Ingrid"",
+      ""task"": ""Announce offsite date to the whole company"",
+      ""due"": ""Monday""
+    }
+  ]
+}"
+openrouter,qwen/qwen3.5-9b,3,45,Parasail,2.6e-05,1,1.0,1.0,1.0,162.39,0.285,,,125,54,0.618,"{""action_items"": [{""owner"": ""Wanda"", ""task"": ""Clean out the break room fridge"", ""due"": ""after lunch""}, {""owner"": ""Tyler"", ""task"": ""Buy new coffee machine filters"", ""due"": ""tomorrow""}]}"
