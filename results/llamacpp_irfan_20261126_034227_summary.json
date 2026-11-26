@@ -1,0 +1,67 @@
+{
+  "backend": "llamacpp",
+  "model": "qwen3.5-4b",
+  "label": "llamacpp_irfan",
+  "examples": 45,
+  "runs": 3,
+  "valid_json_rate": 1.0,
+  "mean_f1": 0.9593,
+  "median_tokens_per_s": 76.32,
+  "median_ttft_s": 2.323,
+  "median_seconds_per_request": 2.78,
+  "total_benchmark_time_s": 406.3,
+  "cold_start_s": 13.76,
+  "num_ctx_requested": 4096,
+  "max_tokens_cap": 1024,
+  "request_fields_dropped": [],
+  "reasoning_setting": null,
+  "structured_output": "json_schema",
+  "requests_with_thinking_output": 0,
+  "cost_usd_total": null,
+  "cost_usd_per_1000_requests": null,
+  "providers_seen": [],
+  "served_model_ids": [
+    "unsloth/Qwen3.5-4B-GGUF:Q4_K_M"
+  ],
+  "cloud_run_memory_not_recorded": false,
+  "gpu_used_mb_before": [
+    4751
+  ],
+  "peak_gpu_used_mb_per_gpu": [
+    4928
+  ],
+  "system_ram_used_mb_before": 17890,
+  "peak_system_ram_used_mb": 23518,
+  "peak_server_process_ram_mb": 9714,
+  "engine_version": "b12721-79c69f4b0",
+  "context_length": 4096,
+  "model_path": "C:\\Users\\irf\\.cache\\huggingface\\hub\\models--unsloth--Qwen3.5-4B-GGUF\\snapshots\\e87f176479d0855a907a41277aca2f8ee7a09523\\Qwen3.5-4B-Q4_K_M.gguf",
+  "notes": "",
+  "system": {
+    "os_name": "Microsoft Windows 11 Enterprise",
+    "os_version": "10.0.26200 (build 26200)",
+    "processors": [
+      {
+        "name": "AMD Ryzen 7 5700X 8-Core Processor",
+        "cores": 8,
+        "logical_processors": 16
+      }
+    ],
+    "ram_gb": 31.9,
+    "computer": "Gigabyte Technology Co., Ltd. B550 GAMING X V2",
+    "gpus": [
+      {
+        "name": "NVIDIA GeForce RTX 3070",
+        "driver": "32.0.16.1088"
+      }
+    ],
+    "nvidia_gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 3070",
+        "vram_mb": 8192,
+        "driver": "610.88"
+      }
+    ]
+  }
+}
